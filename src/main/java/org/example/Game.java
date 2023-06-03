@@ -13,6 +13,10 @@ public class Game {
         setGameMode();
     }
 
+    /**
+     * Prompts the player to select the game mode (single-player or multiplayer).
+     * Sets the 'singlePlayer' variable based on the user input.
+     */
     private void setGameMode() {
         Scanner userInput = new Scanner((System.in));
         System.out.println("Select Game Mode!\n");
