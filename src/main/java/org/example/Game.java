@@ -49,10 +49,11 @@ public class Game {
     private void startGame() {
         while (true) {
             System.out.println("Enter your move or type 'exit' to quit the game:");
+            System.out.println("Moves: ROCK, PAPER, SCISSORS");
             String input = getPlayerInput();
 
             if (input.equalsIgnoreCase("exit")) {
-                System.out.println("Exiting RPS Arena...");
+                System.out.println("\nExiting RPS Arena...");
                 System.exit(0);
             }
 
@@ -65,7 +66,7 @@ public class Game {
             Moves opponentMove;
             if (singlePlayer) {
                 opponentMove = computerPlayer.generateCPUMove();
-                System.out.println("Computer played: " + opponentMove);
+                System.out.println("\nComputer played: " + opponentMove);
             } else {
                 opponentMove = player.getOpponent().getPlayerMove();
                 System.out.println(player.getOpponent().getUsername() + " played: " + opponentMove);
