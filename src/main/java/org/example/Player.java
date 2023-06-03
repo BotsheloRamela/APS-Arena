@@ -10,28 +10,44 @@ public class Player {
     String username;
     int playerPoints;
     private Player opponent;
+
+    /*
+    * Initializes a player by prompting them to enter their username, setting the initial points to 0, and displaying a greeting message.*/
     public Player() {
         this.playerPoints = 0;
         this.username = promptUsername();
         System.out.println("Hello " + username + "!\n");
     }
 
+    /*
+    *  Sets the opponent of the player. It takes a Player object as a parameter and assigns it to the opponent field of the player.*/
     public void setOpponent(Player opponent) {
         this.opponent = opponent;
     }
 
+
+    /**
+    * @return the opponent of the player.
+    */
     public Player getOpponent() {
         return opponent;
     }
 
+
+    /**
+     * @return returns the username of the player*/
     public String getUsername() {
         return username;
     }
 
+    /**
+     * @return returns the points of the player*/
     public int getPlayerPoints() {
         return playerPoints;
     }
 
+    /**
+     *  Increments the points of the player*/
     public void incrementPoints() {
         playerPoints++;
     }
