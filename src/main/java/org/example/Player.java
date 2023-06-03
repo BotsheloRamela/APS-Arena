@@ -24,6 +24,10 @@ public class Player {
         return opponent;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
     /**
      * Prompts the player to enter their username.
      *
