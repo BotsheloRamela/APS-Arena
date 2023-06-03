@@ -16,6 +16,7 @@ public class Player {
 
     /**
      * Prompts the player to enter their username.
+     *
      * @return The username entered by the player.
      */
     public String promptUsername() {
@@ -25,7 +26,22 @@ public class Player {
         return userInput.nextLine();
     }
 
-    public void getPlayerMove() {
+    /**
+     * Prompts the player to enter their move (Rock, Paper, or Scissors).
+     * If the user input is not valid, the player is prompted again until a valid move is entered.
+     *
+     * @return The valid move entered by the player.
+     */
+    public Moves getPlayerMove() {
         System.out.println("Rock, Paper or Scissors?\n");
+        Scanner userInput = new Scanner((System.in));
+        String input = userInput.nextLine().toUpperCase();
+
+        if (input.equals(Moves.ROCK.toString()) || input.equals(Moves.PAPER.toString()) || input.equals(Moves.SCISSORS.toString())) {
+            return Moves.valueOf(input);
+        } else {
+            System.out.println("Invalid move. Please try again.");
+            return getPlayerMove();
+        }
     }
 }
