@@ -48,11 +48,27 @@ public class Game {
 
     private void startGame() {
         while (true) {
-            Moves playerMove = player.getPlayerMove();
-            Moves opponentMove = null;
+            System.out.println("Enter your move or type 'exit' to quit the game:");
+            String input = getPlayerInput();
+
+            if (input.equalsIgnoreCase("exit")) {
+                System.out.println("Exiting RPS Arena...");
+                System.exit(0);
+            }
+
+            Moves playerMove = convertToMove(input);
+            if (playerMove == null) {
+                System.out.println("Invalid move. Please try again.");
+                continue;
+            }
+
+            Moves opponentMove;
             if (singlePlayer) {
                 opponentMove = computerPlayer.generateCPUMove();
-                System.out.println("\nComputer played: " + opponentMove);
+                System.out.println("Computer played: " + opponentMove);
+            } else {
+                opponentMove = player.getOpponent().getPlayerMove();
+                System.out.println(player.getOpponent().getUsername() + " played: " + opponentMove);
             }
 
             String result = gameLogic.determineWinner(playerMove, opponentMove);
