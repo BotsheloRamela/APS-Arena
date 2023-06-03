@@ -21,7 +21,7 @@ public class ComputerPlayer {
      *
      * @return A random move from the Moves enum.
      */
-    private Moves generateCPUMove() {
+    public Moves generateCPUMove() {
         Moves[] moves = Moves.values();
         Random random = new Random();
         int index = random.nextInt(moves.length);
