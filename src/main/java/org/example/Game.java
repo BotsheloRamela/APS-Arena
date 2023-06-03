@@ -32,7 +32,7 @@ public class Game {
         String input = userInput.nextLine();
         if (input.equalsIgnoreCase("1")) {
             singlePlayer = true;
-            System.out.println("You have selected Single-player!\n");
+            System.out.println("You have selected Single-player mode!\n");
             player = new Player();
             computerPlayer = new ComputerPlayer();
         } else if (input.equalsIgnoreCase("2")) {
@@ -52,13 +52,18 @@ public class Game {
             Moves opponentMove = null;
             if (singlePlayer) {
                 opponentMove = computerPlayer.generateCPUMove();
-                System.out.println("Computer played: " + opponentMove);
+                System.out.println("\nComputer played: " + opponentMove);
             }
 
             String result = gameLogic.determineWinner(playerMove, opponentMove);
             System.out.println("Result: " + result);
             updatePoints(result);
         }
+    }
+
+    private String getPlayerInput() {
+        Scanner userInput = new Scanner(System.in);
+        return userInput.nextLine().toUpperCase();
     }
 
 
@@ -78,7 +83,7 @@ public class Game {
             System.out.println("It's a tie!");
         }
 
-        System.out.println("Points:");
+        System.out.println("\nPoints:");
         System.out.println(player.getUsername() + ": " + player.getPlayerPoints());
         if (!singlePlayer) {
             System.out.println(player.getOpponent().getUsername() + ": " + player.getOpponent().getPlayerPoints());
