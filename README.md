@@ -1,4 +1,4 @@
-# APS-Arena - Rock Paper Scissors Game
+# RPS-Arena - Rock Paper Scissors Game
 RPS Arena is a Java command-line interface (CLI) application that allows players to play the classic game of Rock Paper Scissors against the computer or against another human player connected to the game's local server.
 
 The game starts with the player selecting their game mode - single player against the computer or multiplayer against another human player. In single-player mode, the player competes against the computer, and in multiplayer mode, the player connects to the local server and competes against another human player.
