@@ -8,9 +8,14 @@ import java.util.Scanner;
 */
 public class Game {
     boolean singlePlayer;
+    Player player;
+    ComputerPlayer computerPlayer;
+    GameLogic gameLogic;
+
     public Game() {
         System.out.println("Welcome to RPS Arena!\n");
         setGameMode();
+        gameLogic = new GameLogic();
     }
 
     /**
@@ -27,7 +32,8 @@ public class Game {
         if (input.equalsIgnoreCase("1")) {
             singlePlayer = true;
             System.out.println("You have selected Single-player!\n");
-            new Player();
+            player = new Player();
+            computerPlayer = new ComputerPlayer();
         } else if (input.equalsIgnoreCase("2")) {
             singlePlayer = false;
         } else if (input.equalsIgnoreCase("exit")) {
