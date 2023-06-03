@@ -41,7 +41,7 @@ public class Player {
      *
      * @return The username entered by the player.
      */
-    public String promptUsername() {
+    private String promptUsername() {
         Scanner userInput = new Scanner((System.in));
         System.out.println("What's your username?");
         return userInput.nextLine();
