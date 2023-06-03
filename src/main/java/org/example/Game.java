@@ -28,7 +28,11 @@ public class Game {
             singlePlayer = true;
         } else if (input.equalsIgnoreCase("2")) {
             singlePlayer = false;
-        } else {
+        } else if (input.equalsIgnoreCase("exit")) {
+            System.out.println("Exiting APS Arena...");
+            System.exit(0);
+        }
+        else {
             setGameMode();
         }
     }
