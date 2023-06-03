@@ -21,6 +21,11 @@ public class Player {
     public String promptUsername() {
         Scanner userInput = new Scanner((System.in));
         System.out.println("What's your username?");
+        System.out.println("Hello " + userInput + "!\n");
         return userInput.nextLine();
+    }
+
+    public void getPlayerMove() {
+        System.out.println("Rock, Paper or Scissors?\n");
     }
 }
