@@ -61,9 +61,19 @@ public class Game {
         }
     }
 
+
     private String getPlayerInput() {
         Scanner userInput = new Scanner(System.in);
         return userInput.nextLine().toUpperCase();
+    }
+
+
+    private Moves convertToMove(String input) {
+        try {
+            return Moves.valueOf(input);
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
     }
 
 
