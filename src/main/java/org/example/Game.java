@@ -16,6 +16,7 @@ public class Game {
         System.out.println("Welcome to RPS Arena!\n");
         setGameMode();
         gameLogic = new GameLogic();
+        startGame();
     }
 
     /**
@@ -43,5 +44,9 @@ public class Game {
         else {
             setGameMode();
         }
+    }
+
+    private void startGame() {
+        while (true) {}
     }
 }
