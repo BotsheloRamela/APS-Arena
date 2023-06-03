@@ -26,6 +26,7 @@ public class Game {
         String input = userInput.nextLine();
         if (input.equalsIgnoreCase("1")) {
             singlePlayer = true;
+            System.out.println("You have selected Single-player!\n");
         } else if (input.equalsIgnoreCase("2")) {
             singlePlayer = false;
         } else if (input.equalsIgnoreCase("exit")) {
