@@ -57,6 +57,7 @@ public class Game {
 
             String result = gameLogic.determineWinner(playerMove, opponentMove);
             System.out.println("Result: " + result);
+            updatePoints(result);
         }
     }
 
