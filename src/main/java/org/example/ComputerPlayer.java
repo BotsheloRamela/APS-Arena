@@ -8,6 +8,14 @@ import java.util.Random;
 public class ComputerPlayer {
     private int cpuPoints = 0;
 
+    public int getCpuPoints() {
+        return cpuPoints;
+    }
+
+    public void incrementPoints() {
+        cpuPoints++;
+    }
+
     /**
      * Generates a random move for the computer player.
      *
