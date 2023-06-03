@@ -1,8 +1,8 @@
 package org.example;
 
 /*
-* Serves as the entry point of the application.
-* It contains the main method and is responsible for starting the game.
+* Handles the overall flow of the game.
+* It prompts the player for game mode selection, creates instances of other necessary classes, and orchestrates the gameplay.
 */
 public class Game {
 }
