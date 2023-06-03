@@ -8,7 +8,9 @@ import java.util.Scanner;
  * It provides methods to get the player's move and update their points.*/
 public class Player {
     String username;
+    int playerPoints;
     public Player() {
+        playerPoints = 0;
         username = promptUsername();
     }
 
