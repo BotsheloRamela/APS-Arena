@@ -9,10 +9,19 @@ import java.util.Scanner;
 public class Player {
     String username;
     int playerPoints;
+    private Player opponent;
     public Player() {
-        playerPoints = 0;
-        username = promptUsername();
+        this.playerPoints = 0;
+        this.username = promptUsername();
         System.out.println("Hello " + username + "!\n");
+    }
+
+    public void setOpponent(Player opponent) {
+        this.opponent = opponent;
+    }
+
+    public Player getOpponent() {
+        return opponent;
     }
 
     /**
