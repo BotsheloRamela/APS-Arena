@@ -28,6 +28,14 @@ public class Player {
         return username;
     }
 
+    public int getPlayerPoints() {
+        return playerPoints;
+    }
+
+    public void incrementPoints() {
+        playerPoints++;
+    }
+
     /**
      * Prompts the player to enter their username.
      *
