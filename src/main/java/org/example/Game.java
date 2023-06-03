@@ -47,6 +47,16 @@ public class Game {
     }
 
     private void startGame() {
-        while (true) {}
+        while (true) {
+            Moves playerMove = player.getPlayerMove();
+            Moves opponentMove = null;
+            if (singlePlayer) {
+                opponentMove = computerPlayer.generateCPUMove();
+                System.out.println("Computer played: " + opponentMove);
+            }
+
+            String result = gameLogic.determineWinner(playerMove, opponentMove);
+            System.out.println("Result: " + result);
+        }
     }
 }
