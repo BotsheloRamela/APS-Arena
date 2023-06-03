@@ -8,6 +8,11 @@ import java.util.Random;
 public class ComputerPlayer {
     private int cpuPoints = 0;
 
+    /**
+     * Generates a random move for the computer player.
+     *
+     * @return A random move from the Moves enum.
+     */
     private Moves generateCPUMove() {
         Moves[] moves = Moves.values();
         Random random = new Random();
