@@ -59,4 +59,31 @@ public class Game {
             System.out.println("Result: " + result);
         }
     }
+
+
+    private void updatePoints(String result) {
+        if (result.equals("WIN")) {
+            player.incrementPoints();
+            System.out.println(player.getUsername() + " wins!");
+        } else if (result.equals("LOSS")) {
+            if (singlePlayer) {
+                computerPlayer.incrementPoints();
+                System.out.println("Computer wins!");
+            } else {
+                player.getOpponent().incrementPoints();
+                System.out.println(player.getOpponent().getUsername() + " wins!");
+            }
+        } else {
+            System.out.println("It's a tie!");
+        }
+
+        System.out.println("Points:");
+        System.out.println(player.getUsername() + ": " + player.getPlayerPoints());
+        if (!singlePlayer) {
+            System.out.println(player.getOpponent().getUsername() + ": " + player.getOpponent().getPlayerPoints());
+        } else {
+            System.out.println("Computer: " + computerPlayer.getCpuPoints());
+        }
+        System.out.println();
+    }
 }
