@@ -12,6 +12,7 @@ public class Player {
     public Player() {
         playerPoints = 0;
         username = promptUsername();
+        System.out.println("Hello " + username + "!\n");
     }
 
     /**
@@ -22,7 +23,6 @@ public class Player {
     public String promptUsername() {
         Scanner userInput = new Scanner((System.in));
         System.out.println("What's your username?");
-        System.out.println("Hello " + userInput + "!\n");
         return userInput.nextLine();
     }
 
